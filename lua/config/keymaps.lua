@@ -1,3 +1,7 @@
--- Keymaps are automatically loaded on the VeryLazy event
--- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
--- Add any additional keymaps here
+-- lua/config/keymaps.lua
+local km = vim.keymap
+
+-- jump up into the TS context window
+km.set("n", "jc", function()
+  require("treesitter-context").go_to_context(vim.v.count1)
+end, { silent = true, desc = "Jump to TS context" })

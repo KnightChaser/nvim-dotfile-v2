@@ -2,4 +2,5 @@
 return {
   require("plugins.neotree"),
   require("plugins.treesitter"),
+  require("plugins.treesitter_context"),
 }
