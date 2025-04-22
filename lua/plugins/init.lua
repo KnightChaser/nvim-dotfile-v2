@@ -1,6 +1,7 @@
 -- lua/plugins/init.lua
 return {
   require("plugins.fidget"),
+  require("plugins.mason-lspconfig"),
   require("plugins.neotree"),
   require("plugins.treesitter"),
   require("plugins.treesitter-context"),
