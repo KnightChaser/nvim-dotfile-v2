@@ -10,4 +10,5 @@ return {
   require("plugins.treesitter"),
   require("plugins.treesitter-context"),
   require("plugins.trouble"),
+  require("plugins.wakatime"),
 }
