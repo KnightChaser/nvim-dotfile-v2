@@ -2,6 +2,7 @@
 return {
   require("plugins.cmp"),
   require("plugins.fidget"),
+  require("plugins.luasnip"),
   require("plugins.mason-lspconfig"),
   require("plugins.neotree"),
   require("plugins.treesitter"),
