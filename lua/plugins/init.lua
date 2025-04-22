@@ -4,6 +4,7 @@ return {
   require("plugins.barbar"),
   require("plugins.cmp"),
   require("plugins.fidget"),
+  require("plugins.hlchunk"),
   require("plugins.luasnip"),
   require("plugins.mason-lspconfig"),
   require("plugins.nvim-tree"),
