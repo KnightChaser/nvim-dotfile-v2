@@ -1,5 +1,6 @@
 -- lua/plugins/init.lua
 return {
+  require("plugins.autopairs"),
   require("plugins.barbar"),
   require("plugins.cmp"),
   require("plugins.fidget"),
