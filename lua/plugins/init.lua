@@ -3,6 +3,7 @@ return {
   require("plugins.autopairs"),
   require("plugins.barbar"),
   require("plugins.cmp"),
+  require("plugins.copilotchat"),
   require("plugins.fidget"),
   require("plugins.hlchunk"),
   require("plugins.lspconfig"),
