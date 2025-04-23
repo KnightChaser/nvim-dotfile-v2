@@ -5,6 +5,7 @@ return {
   require("plugins.cmp"),
   require("plugins.fidget"),
   require("plugins.hlchunk"),
+  require("plugins.lualine"),
   require("plugins.luasnip"),
   require("plugins.mason-lspconfig"),
   require("plugins.nvim-tree"),
