@@ -1,6 +1,14 @@
 -- lua/config/keymaps.lua
 local km = vim.keymap
 
+-- After everything loads,
+-- nukes "jc” keymap so "j"(down) keymap works immediately.
+vim.api.nvim_create_autocmd("VimEnter", {
+  callback = function()
+    km.del("n", "jc")
+  end,
+})
+
 -- jump up into the TS context window
 km.set("n", "jc", function()
   require("treesitter-context").go_to_context(vim.v.count1)
