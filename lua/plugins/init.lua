@@ -12,6 +12,7 @@ return {
   require("plugins.mason-lspconfig"),
   require("plugins.nvim-tree"),
   require("plugins.precognition"),
+  require("plugins.startup-nvim"),
   require("plugins.symbol-usage"),
   require("plugins.treesitter"),
   require("plugins.treesitter-context"),
