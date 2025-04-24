@@ -1,12 +1,62 @@
+# `KnightChaser/nvim-dotfile-v2` 
+> (Powered by Lazy.nvim)
 
-# `nvim-dotfile-v2`
+## 💭 Why a second version?
 
-My custom neovim configuration based on Lazy.nvim, version 2.
+The [first version](https://github.com/KnightChaser/nvim-dotfile-v1) of my dotfiles was my Neovim *day one* adventure—cute, but a bit chaotic, with a bunch of copy-pasted configurations from somewhere on the Internet. It had too many unused plugins and a sprinkle of mysterious bugs. So... I waved goodbye and started fresh from scratch! This version is cleaner, more stable, and less stress.
 
-**Motivation**: The [previous version(`nvim-dotfile-v1`)](git@github.com:KnightChaser/nvim-dotfile-v1.git) was my first Neovim configuration file that I had built since I first said hello to Neovim. However, because of this, the configuration was unstable and error-prone, and for sure there are a bunch of things I don't use. So I decided to recreate the configuration from the scratch.
+---
 
-**Necessary Linux packages for this Neovim setup**
+## Installation Guide
+
+Follow these simple steps to summon this config into your terminal world~! Before setting up, prepare your Neovim first. It's encouraged to use Neovim Nightly version, which can be easily managed and installed via [nvim-bob](https://github.com/MordechaiHadad/bob) tool.
+
+### 1. Install Required Packages
+
+Make sure the essentials are ready (for Ubuntu/Debian-based systems):
 
 ```sh
 sudo apt-get install -y curl ripgrep fd-find make
 ```
+
+### 2. Backup or Remove Old Neovim Config
+
+You can either **backup** your current setup or **wipe** it clean:
+
+#### 🔒 Backup (safe & cozy)
+```sh
+mv ~/.config/nvim{,.backup}          # required
+mv ~/.local/share/nvim{,.backup}     # optional but recommended
+mv ~/.local/state/nvim{,.backup}
+mv ~/.cache/nvim{,.backup}
+```
+
+#### 💥 Remove (no regrets, only vibes)
+```sh
+rm -rf ~/.config/nvim*
+rm -rf ~/.local/share/nvim*
+rm -rf ~/.local/state/nvim*
+rm -rf ~/.cache/nvim*
+```
+### 3. Clone the Repository
+
+Fetch this dotfile setup from my GitHub into your Neovim config directory:
+
+```sh
+git clone git@github.com:KnightChaser/nvim-dotfile-v2.git ~/.config/nvim
+```
+
+### 4. Launch Neovim & Sync the Magic
+
+Open Neovim:
+```sh
+nvim
+```
+
+Then run this inside Neovim:
+```
+:Lazy sync
+```
+
+This will install missing packages, update versions, and basically *sparkle things up* ✨  
+Once it’s done, you're ready to Neovim in style~! Stay sharp, stay fluffy, and may your configs never break again~ >_< 💻🌸
