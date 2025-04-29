@@ -4,6 +4,7 @@ return {
   require("plugins.barbar"),
   require("plugins.cmp"),
   require("plugins.copilotchat"),
+  require("plugins.dropbar"),
   require("plugins.fidget"),
   require("plugins.hlchunk"),
   require("plugins.lspconfig"),
