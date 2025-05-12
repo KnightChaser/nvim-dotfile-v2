@@ -2,7 +2,7 @@
 return {
   "williamboman/mason-lspconfig.nvim",
   dependencies = {
-    "williamboman/mason.nvim", -- make sure mason is loaded first
+    "mason-org/mason.nvim", -- make sure mason is loaded first
   },
   event = "LspAttach", -- load when any LSP attaches
   opts = {
