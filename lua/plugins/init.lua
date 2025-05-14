@@ -6,6 +6,7 @@ return {
   require("plugins.copilotchat"),
   require("plugins.dropbar"),
   require("plugins.fidget"),
+  require("plugins.git-blame"),
   require("plugins.hlchunk"),
   require("plugins.lspconfig"),
   require("plugins.lualine"),
