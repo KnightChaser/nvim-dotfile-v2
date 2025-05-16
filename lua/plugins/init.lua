@@ -13,6 +13,7 @@ return {
   require("plugins.luasnip"),
   require("plugins.mason-lspconfig"),
   require("plugins.nvim-tree"),
+  require("plugins.oil"),
   require("plugins.precognition"),
   require("plugins.startup-nvim"),
   require("plugins.symbol-usage"),
