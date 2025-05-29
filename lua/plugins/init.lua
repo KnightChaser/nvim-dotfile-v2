@@ -13,6 +13,7 @@ return {
   require("plugins.lualine"),
   require("plugins.luasnip"),
   require("plugins.mason-lspconfig"),
+  require("plugins.nuget"),
   require("plugins.nvim-tree"),
   require("plugins.oil"),
   require("plugins.precognition"),
