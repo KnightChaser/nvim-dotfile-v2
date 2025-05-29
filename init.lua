@@ -17,3 +17,10 @@ vim.api.nvim_create_autocmd("VimLeavePre", {
     end
   end,
 })
+
+-- C# configuration (omnisharp)
+local lspconfig = require("lspconfig")
+local pid = vim.fn.getpid()
+lspconfig.omnisharp.setup({
+  cmd = { "omnisharp", "--languageserver", "--hostPID", tostring(pid) },
+})

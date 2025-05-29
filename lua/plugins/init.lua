@@ -5,6 +5,7 @@ return {
   require("plugins.cmp"),
   require("plugins.copilotchat"),
   require("plugins.dropbar"),
+  require("plugins.easy-dotnet"),
   require("plugins.fidget"),
   require("plugins.git-blame"),
   require("plugins.hlchunk"),
