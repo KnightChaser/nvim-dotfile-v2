@@ -1,4 +1,6 @@
 -- ~/.config/nvim/init.lua
+vim.loader.enable()
+
 vim.g.mapleader = " "
 
 -- bootstrap lazy.nvim here (as before)…
