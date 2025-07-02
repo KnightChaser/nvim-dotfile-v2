@@ -14,6 +14,7 @@ return {
   require("plugins.lualine"),
   require("plugins.luasnip"),
   require("plugins.mason-lspconfig"),
+  require("plugins.neominimap"),
   require("plugins.nuget"),
   require("plugins.nvim-tree"),
   require("plugins.oil"),
