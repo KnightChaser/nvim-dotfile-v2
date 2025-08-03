@@ -1,3 +1,4 @@
+-- lua/plugins/nuget.lua
 return {
   "d7omdev/nuget.nvim",
   dependencies = {

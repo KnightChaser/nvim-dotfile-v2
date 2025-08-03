@@ -1,3 +1,4 @@
+-- lua/plugins/copilotchat.lua
 return {
   {
     "CopilotC-Nvim/CopilotChat.nvim",
