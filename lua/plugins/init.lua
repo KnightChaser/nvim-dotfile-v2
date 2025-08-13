@@ -5,6 +5,7 @@ return {
   require("plugins.barbar"),
   require("plugins.cmp"),
   require("plugins.copilotchat"),
+  require("plugins.decisive"),
   require("plugins.dropbar"),
   require("plugins.easy-dotnet"),
   require("plugins.fidget"),
