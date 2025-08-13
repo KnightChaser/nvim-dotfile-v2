@@ -1,6 +1,8 @@
 -- lua/plugins/csvview.lua
 return {
   "hat0uma/csvview.nvim",
+  ft = { "csv", "tsv" }, -- load on CSV-like files
+  cmd = { "CsvViewEnable", "CsvViewDisable", "CsvViewToggle" },
   ---@module "csvview"
   ---@type CsvView.Options
   opts = {
@@ -15,5 +17,17 @@ return {
       jump_prev_row = { "<S-Enter>", mode = { "n", "v" } },
     },
   },
-  cmd = { "CsvViewEnable", "CsvViewDisable", "CsvViewToggle" },
+  config = function(_, opts)
+    require("csvview").setup(opts)
+
+    -- Auto-enable on CSV buffers only
+    local grp = vim.api.nvim_create_augroup("CsvViewAutoEnable", { clear = true })
+    vim.api.nvim_create_autocmd("FileType", {
+      group = grp,
+      pattern = { "csv", "tsv" }, -- add more like "csv_semicolon" if you use them
+      callback = function()
+        vim.cmd([[silent! CsvViewEnable display_mode=border]])
+      end,
+    })
+  end,
 }
