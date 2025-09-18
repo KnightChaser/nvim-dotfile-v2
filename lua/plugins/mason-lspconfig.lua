@@ -1,6 +1,6 @@
 -- lua/plugins/mason-lspconfig.lua
 return {
-  "williamboman/mason-lspconfig.nvim",
+  "mason-org/mason-lspconfig.nvim",
   dependencies = {
     "mason-org/mason.nvim", -- make sure mason is loaded first
   },
