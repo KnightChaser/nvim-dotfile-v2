@@ -2,9 +2,8 @@
 return {
   {
     "nvim-treesitter/nvim-treesitter",
-    dependencies = {
-      "nvim-treesitter/nvim-treesitter-textobjects",
-    },
+    main = "nvim-treesitter.configs", -- <- let Lazy require this module
+    dependencies = { "nvim-treesitter/nvim-treesitter-textobjects" },
     build = ":TSUpdate",
     event = { "BufReadPre", "BufNewFile" },
     opts = {
@@ -43,8 +42,5 @@ return {
         },
       },
     },
-    config = function(_, opts)
-      require("nvim-treesitter.configs").setup(opts)
-    end,
   },
 }
