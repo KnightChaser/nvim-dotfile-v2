@@ -19,7 +19,7 @@ return {
           left_bottom = "╰",
           right_arrow = ">",
         },
-        textobject = "ic", -- e.g., 'ic' => 'inner chunk'
+        -- textobject = "ic",
         priority = 15, -- chunk priority (higher means drawn on top)
         -- You can add `exclude_filetypes`, `notify`, etc. if needed
       },
