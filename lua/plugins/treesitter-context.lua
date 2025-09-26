@@ -7,13 +7,13 @@ return {
   },
   opts = {
     enable = true, -- turn the plugin on
+    line_numbers = true,
+    separator = "─",
     max_lines = 0, -- no limit
     min_window_height = 0, -- no limit
-    line_numbers = true,
     multiline_threshold = 20,
     trim_scope = "outer",
     mode = "cursor",
-    separator = nil,
     zindex = 20,
     on_attach = nil,
   },
