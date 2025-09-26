@@ -4,20 +4,45 @@ return {
     "nvim-treesitter/nvim-treesitter",
     main = "nvim-treesitter.configs",
     build = ":TSUpdate",
-    event = { "BufReadPre", "BufNewFile" },
+    lazy = false,
     opts = {
-      ensure_installed = { "c", "go", "python", "lua", "bash" },
+      ensure_installed = {
+        "c",
+        "go",
+        "python",
+        "lua",
+        "bash",
+        "query",
+        "vim",
+        "vimdoc",
+        "regex",
+        "markdown",
+        "markdown_inline",
+        "json",
+        "yaml",
+        "html",
+        "css",
+        "javascript",
+        "typescript",
+        "tsx",
+      },
       auto_install = true,
-      highlight = { enable = true },
+      highlight = {
+        enable = true,
+        disable = function(lang, buf)
+          local ok, st = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))
+          return ok and st and st.size > 200 * 1024
+        end,
+      },
       indent = { enable = true },
 
-      -- Incremental selection (all under <leader>v …)
       incremental_selection = {
         enable = true,
         keymaps = {
-          -- TODO: Fix these keymaps to use <leader> later
-          init_selection = "m", -- start selection
-          node_incremental = "M", -- grow to next node
+          init_selection = "<leader>vi",
+          node_incremental = "<leader>vn",
+          node_decremental = "<leader>vp",
+          scope_incremental = "<leader>vs",
         },
       },
 
@@ -25,8 +50,6 @@ return {
         select = {
           enable = true,
           lookahead = true,
-          -- NOTE: these only apply in operator-pending/visual,
-          -- so 'af' won't hijack normal-mode 'a' anymore.
           keymaps = {
             ["af"] = "@function.outer",
             ["if"] = "@function.inner",
@@ -54,24 +77,8 @@ return {
     dependencies = { "nvim-treesitter/nvim-treesitter-textobjects" },
   },
   {
-    "danymat/neogen",
-    keys = {
-      {
-        "<leader>cn",
-        function()
-          require("neogen").generate()
-        end,
-        desc = "Generate doc",
-      },
-      {
-        "<leader>cN",
-        function()
-          require("neogen").generate({ type = "class" })
-        end,
-        desc = "Doc: class",
-      },
-    },
-    opts = { snippet_engine = "luasnip", enabled = true },
-    dependencies = { "nvim-treesitter/nvim-treesitter" },
+    "windwp/nvim-ts-autotag",
+    event = "InsertEnter",
+    opts = {},
   },
 }
