@@ -10,6 +10,7 @@ return {
         "c",
         "go",
         "python",
+        "rust",
         "lua",
         "bash",
         "query",

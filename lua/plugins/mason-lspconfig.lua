@@ -7,7 +7,7 @@ return {
   event = "LspAttach", -- load when any LSP attaches
   opts = {
     -- install these out of the box:
-    ensure_installed = { "clangd", "gopls", "pyright" },
+    ensure_installed = { "clangd", "gopls", "pyright", "rust_analyzer" },
     -- auto‑install any server you call via lspconfig.setup{}
     automatic_installation = true,
   },
